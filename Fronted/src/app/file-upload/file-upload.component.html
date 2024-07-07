@@ -1,0 +1,18 @@
+
+<form #f="ngForm" >
+<div class="input_raw d-flex flex-raw justify-content-center align-items-center">
+    <input ngModel type="file" name="image_name" class="left_input col-8" placeholder="Enter image name here.. "(change)=onChange($event)/>
+    <button class="validate_btn" type="submit" (click)="onUpload()">Validate</button>
+</div>
+</form>
+<!-- Shareable short link of  uploaded file -->
+<div class="container text-center jumbotron"
+    *ngIf="shortLink">
+    <h2> Visit Here</h2>
+    <a href="{{shortLink}}">{{shortLink}}</a>
+</div>
+  
+<!--Flag variable is used here-->
+<div class="container" *ngIf="loading">
+    <h3>Loading ...</h3>
+</div>

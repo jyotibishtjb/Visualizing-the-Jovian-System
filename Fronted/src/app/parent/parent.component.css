@@ -1,0 +1,17 @@
+.parent-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:  0;
+    right:  0;
+    
+    
+    margin: 4rem 6rem 4rem 6rem;
+   
+    opacity: 1;
+   
+    border: 1px solid #fff;
+    overflow: hidden;
+    
+}
+

@@ -1,0 +1,29 @@
+
+.download {
+    border: 1px dashed rgb(89, 8, 42);
+    width: auto;
+    height: 135px;
+    padding: 1rem 1rem ;
+
+}
+
+.download img{
+    width: auto;
+    height: 100px;
+}
+
+h3 {
+    color: rgb(89, 8, 42);
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.jip-card {
+    width: 600px;
+    background-color: rgba(89, 8, 42, 0.134);
+    padding: 1rem 1rem;
+    height: max-content;
+}

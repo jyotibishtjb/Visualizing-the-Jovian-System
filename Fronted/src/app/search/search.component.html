@@ -1,0 +1,45 @@
+
+
+
+<div class="">
+
+
+<div class="d-flex flex-row justify-content-center align-items-center">
+    <button ngModel class="button_option btn1" [class.active]="!isHidden" (click)="makeHide(2,evt)" #evt="ngModel">Search by Name</button>
+    <button ngModel class="button_option btn2" [class.active]="!isHidden2" (click)="makeHide(1,evt2)" #evt2="ngModel">Search by Image</button>
+    
+</div>
+
+
+<form #f="ngForm" [hidden]="isHidden" >
+
+    <div class="input_raw d-flex flex-row justify-content-center align-items-center">
+        <input ngModel name="image_name" class="left_input col-8" placeholder="Enter image name here.."/>
+        <button class="validate_btn" type="submit" (click)="onSubmit(f)">Validate</button>
+    </div>
+    
+
+</form>
+    
+<form #f="ngForm" [hidden]="isHidden2">
+    <div class="input_raw d-flex flex-row justify-content-center align-items-center">
+        <input ngModel type="file" name="image_name" class="left_input col-8" placeholder="Enter image name here.. "(change)=onChange($event)/>
+        <button class="validate_btn" type="submit" (click)="onUpload()">Upload</button>
+    </div>
+    </form>
+
+    <div class="container text-center jumbotron"
+        *ngIf="shortLink">
+        <h2> Visit Here</h2>
+        <a href="{{shortLink}}">{{shortLink}}</a>
+    </div>
+      
+    <div class="test d-flex flex-raw justify-content-center align-items-center" *ngIf="resp_after_processing">
+        <img [src]="trustedUrl_old">
+    </div>
+
+    <div class="loader_absolue d-flex flex-raw justify-content-center align-items-center" *ngIf="loading">
+        <img src="../../assets/AmusedEnergeticDassie-size-res-unscreen.gif">
+    </div>
+
+</div>

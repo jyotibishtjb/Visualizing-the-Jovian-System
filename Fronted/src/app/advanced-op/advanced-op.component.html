@@ -1,0 +1,69 @@
+
+<div class="parent pt-5">
+    <div class=" d-flex flex-column justify-content-center align-items-center pt-5">
+        
+      <p class="pt-3">You can choose Segmentation / Recognition as advanced operations for your image</p>
+      <div class="container-fluid">
+      <div class="row ">
+            <div class="col-8">
+                <div class="  d-flex flex-row justify-content-around align-items-center">
+                    <div class="img img_enhanced">
+                        <img src="../../assets/WhatsApp Image 2022-10-02 at 23.17.42.jpeg">
+                    </div>
+                </div>
+            </div>
+      
+        
+      
+        <div class="col-4  d-flex flex-column justify-content-start align-items-center">
+            <div class="extra_options p-3 m-0">
+            <p>Available options :</p>
+            <div class="buttons d-flex flex-column justify-content-around align-items-center" >
+                <button class="button seg_btn" type="submit" >Segmentation</button>
+                <button class="button recog_btn" type="submit"> Recognition</button>
+            </div>
+        </div>
+
+        <div class="extra_options  m-1">
+
+            <div class="input_raw2 d-flex flex-row justify-content-end align-items-center">
+                <input ngModel name="image_name" class="left_input col-8" placeholder="Nombre segment"/>
+                <button class="validate_btn" type="submit" ><i class="bi bi-check-lg"></i></button>
+            </div>
+            <div class="input_raw2 d-flex flex-row justify-content-end align-items-center">
+                <input ngModel name="image_name" class="left_input col-8" placeholder="Nombre régions"/>
+                <button class="validate_btn" type="submit" ><i class="bi bi-check-lg"></i></button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+</div>
+
+        
+    
+       
+      
+            
+            
+                    
+              
+            
+        </div>
+        <div class=" d-flex flex-column justify-content-start align-items-center extra_options">
+            <p class="pt-1"><span>Download</span> or Share on social media :</p>
+        <share-buttons pt-0 theme="modern-dark"
+        [include]="['copy', 'facebook', 'email', 'messenger',  'linkedin', 'pinterest', 'reddit', 'sms', 'telegram' ,'twitter', 'whatsapp']"
+        [showIcon]="true"
+        [showText]="false"
+        url="localhsot:8000/process"
+        description="Angular Share Buttons"
+        twitterAccount="rodrigokamada"
+        class="pt-5">
+      </share-buttons>
+    </div>
+     
+    </div>
+    
+    

@@ -1,0 +1,45 @@
+.title{
+    
+}
+.img_jup img {
+    width: 150px;
+    height: auto;
+    margin: 1rem;
+}
+h3 {
+    color: rgb(89, 8, 42);
+}
+
+.card_info{
+    margin-left: 1rem;
+    margin: 1rem;
+    padding: .5rem;
+    width: 95%;
+    height: max-content;
+    border: 1px dashed rgb(89, 8, 42);
+}
+
+
+.card_info p{
+    text-align: center;
+}
+
+
+.card_info p span{
+    color: rgb(89, 8, 42);
+    font-weight: 700;
+}
+
+.process_button {
+    width: 80%;
+    outline: none;
+    border: 0;
+    padding: .5rem 1rem;
+    
+    background-color:rgb(89, 8, 42);
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: ease-in-out .3s all;
+   
+}

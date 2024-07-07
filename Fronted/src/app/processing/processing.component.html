@@ -1,0 +1,80 @@
+
+<div class="parent pt-5">
+<div class=" d-flex flex-column justify-content-center align-items-center pt-5">
+    
+    <p>Below you can see the original input photo and the processesed one</p>
+    <div class="  d-flex flex-row justify-content-around align-items-center">
+        <div class="img img_before">
+            <!-- static images to test the ui - will be replaced by links to images provided by backend-->
+            <img [src]="process_old">
+        </div>
+        <div class="img img_after">
+            <img [src]="process_new">
+            <!--img src="../../assets/data_images/16111&ts=1656511106_processed.png"-->
+        </div>
+    </div>
+
+   
+    <div class="extra_options">
+        <form #f="ngForm" class="d-flex flex-column justify-content-center align-items-center">
+
+            <div class=" input_raw d-flex flex-raw justify-content-center align-items-center">
+                <div class="raw mr-3  col-md-4  d-flex flex-column justify-content-center align-items-start">
+                    <div>
+                        <input type="checkbox" id="option1" name="option1" [value]="enhanceParams.enhance_small_scale_clouds" (change)="enhanceParams.enhance_small_scale_clouds = !enhanceParams.enhance_small_scale_clouds" >
+                        <label for="brightness">Enhance small scale clouds</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option2" name="option2"[value]="enhanceParams.enhance_large_scale_clouds" (change)="enhanceParams.enhance_large_scale_clouds=!enhanceParams.enhance_large_scale_clouds" >
+                        <label for="contrast">Enhance large scale clouds</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option3" name="option3"[value]="enhanceParams.denoising" (change)="enhanceParams.denoising=!enhanceParams.denoising" >
+                        <label for="brightness">Denoise</label>
+                    </div>
+                  
+                </div>
+                <div class="raw  col-md-4">
+                    <div>
+                        <input type="checkbox" id="option4" name="option4"[value]="enhanceParams.gamma_correction" (change)="enhanceParams.gamma_correction=!enhanceParams.gamma_correction" >
+                        <label for="brightness">Gamma correction</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option5" name="option5"[value]="enhanceParams.enhance_brightness" (change)="enhanceParams.enhance_brightness= !enhanceParams.enhance_brightness" >
+                        <label for="contrast">Enhance brightness</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option6" name="option6" [value]="enhanceParams.gray_scale" (change)="enhanceParams.gray_scale=!enhanceParams.gray_scale">
+                        <label for="contrast">Gray scale </label>
+                    </div>
+                 
+                </div>
+            
+          
+                <div class=" raw col-md-4">
+                    <button class="button regenerate_btn" type="submit" (click)="onSubmit()" >Regenerate Image</button>
+                    <button class="button options_btn"  >Advanced options</button>
+                </div>
+            </div>
+               
+        </form>
+    </div>
+    <div class=" d-flex flex-column justify-content-start align-items-center extra_options">
+        <p class="pt-1"><span>Download</span> or Share on social media :</p>
+    <share-buttons pt-0 theme="modern-dark"
+    [include]="['copy', 'facebook', 'email', 'messenger',  'linkedin', 'pinterest', 'reddit', 'sms', 'telegram' ,'twitter', 'whatsapp']"
+    [showIcon]="true"
+    [showText]="false"
+    url="localhsot:8000/process"
+    description="Angular Share Buttons"
+    twitterAccount="rodrigokamada"
+    class="pt-5">
+  </share-buttons>
+</div>
+ 
+</div>
+
+<div class="loader_absolue d-flex flex-raw justify-content-center align-items-center" *ngIf="loadingProcess">
+    <img src="../../assets/AmusedEnergeticDassie-size-res-unscreen.gif">
+</div>
+</div>
